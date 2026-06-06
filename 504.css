@@ -1,0 +1,494 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Body and HTML setup */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 10px;
+}
+/* Sidebar Container */
+.container {
+    overflow: auto;
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    background-color: #6d6d6d;
+    transition:  0.5s ease;
+    transform: translateX(-250px);
+    z-index: 100;
+    top: 0;
+    left: 0;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+}
+
+.container .head {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    background: linear-gradient(30deg, #a19f9f, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+/* Sidebar List */
+ol {
+    width: 100%;
+    list-style: none;
+    padding-top: 20px;
+}
+
+ol li {
+    display: block;
+    width: 100%;
+}
+
+ol li a {
+    color: #000000;
+    padding: 18px 10px 18px 30px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-left: 4px solid transparent;
+}
+
+ol li a i {
+    width: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+ol li:hover a {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.445), rgba(111, 245, 255, 0.1));
+    color: #ffffff;
+    letter-spacing: 8px;
+    border-left: 4px solid #595a5a;
+    padding-left: 10px;
+}
+
+/* Checkbox (hidden) */
+#check {
+    display: none;
+}
+
+/* Menu Toggle Button */
+#menu-toggle {
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    font-size: 25px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: #000000;
+    border-radius: 1000px;
+    z-index: 101;
+    transition: all 0.3s;
+}
+
+#menu-toggle:hover {
+    transform: rotate(10deg);
+}
+
+#bars {
+    display: block;
+}
+
+/* When sidebar is checked/open */
+#check:checked ~ .container {
+    transform: translateX(0);
+}
+
+#check:checked ~ #menu-toggle #bars {
+    display: none;
+}
+
+/* Add X icon when sidebar is open */
+#check:checked ~ #menu-toggle::after {
+    content: '\f00d';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 25px;
+}
+
+/* Main Section */
+section {
+    min-height: 100vh;
+    background: url(vecteezy_abstract-floral-aesthetic-wallpaper-background-template-with_19080166.svg) center/cover no-repeat fixed;
+    position: relative;
+    transition: filter 0.5s, transform 0.5s;
+    
+}
+
+/* Dim background when sidebar is open */
+#check:checked ~ section {
+    transform: translateX(50px);
+    pointer-events: none;
+}
+
+/* Top Navigation Bar */
+.pain {
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+.pain ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(184, 189, 188, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+    list-style: none;
+    padding: 0;
+}
+
+.pain li {
+    flex: 1;
+    text-align: center;
+}
+
+.pain a {
+    color: white;
+    text-decoration: none;
+    padding: 18px 20px;
+    display: block;
+    font-size: 16px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.pain a i {
+    margin-right: 10px;
+}
+
+.pain a:hover {
+    background-color: rgba(0, 0, 0, 0);
+    letter-spacing: 5px;
+    color: #1100ff;
+}
+
+.pain a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(30deg, #0011ff, #01ffc8);
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.pain a:hover::after {
+    width: 80%;
+}
+
+/* Main Content */
+.element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    z-index: 2;
+    bottom: 50px;
+}
+
+#jk {
+    font-size: 3.5rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(201, 198, 198, 0.5);
+    line-height: 1.6;
+    border-radius: 10px;
+}
+
+#ele {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    line-height: 1.6;
+    background: rgba(0, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+#llc{
+    background-attachment: fixed;
+    mix-blend-mode: multiply;
+    z-index: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 30px;
+    width: 230px;
+    height: 230px;
+    bottom: 200px;
+}
+#checked{
+    display: none;
+}
+#info{
+transition: all 0.3s;
+border-radius: 1000px;
+cursor: pointer;
+position: fixed;  
+z-index: 322;
+background-color: white;
+color: black;
+left: 1283px;
+top: 170px;  
+font-size: 222%;
+padding: 0 7px 0 7px;
+text-decoration: none;
+}
+#info a {
+    text-decoration: none;
+    color: black;
+}
+#info:hover{
+    transform: rotate(10deg);
+}
+#home{
+transition: all 0.3s;
+border-radius: 1000px;
+cursor: pointer;
+position: fixed;  
+z-index: 322;
+background-color: white;
+color: black;
+left: 1283px;
+top: 100px;  
+font-size: 222%;
+padding: 0 7px 0 7px;
+}
+#home:hover{
+    transform: rotate(10deg);
+}
+#home a{
+    text-decoration: none;
+    color: black;
+}
+@media (max-width: 600px) {
+    #info{
+
+left: 265px;
+top: 120px;  
+font-size: 222%;
+padding: 0 7px 0 7px;
+text-decoration: none;
+}
+    #home{
+left: 265px;
+top: 60px;  
+font-size: 200%;
+
+}
+    #llc{
+    mix-blend-mode: multiply;
+    left:0px;
+    padding: 0 0 50px -5px ;
+    margin: 0px;
+    width: 200px;
+    height: 200px;
+    top: 0px;
+}
+     #menu-toggle {
+        right: 10px !important;
+        top: 10px !important;
+        padding: 6px 10px !important;
+        font-size: 18px !important;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.8) !important;
+        backdrop-filter: blur(5px);
+    }
+    
+    /* Make middle text much smaller */
+
+    #jk {
+        font-size: 2.5rem !important;
+        margin-bottom: 8px;
+        top: 0px;
+        position:relative;
+    }
+    #ele {
+        font-size: 0.9rem !important;
+        padding: 10px;
+        line-height: 1.3;
+    }
+
+    /* Sidebar adjustments */
+    .container {
+        width: 180px;
+        transform: translateX(-180px);
+    }
+    
+    .container .head {
+        font-size: 20px;
+        padding: 20px 10px;
+        letter-spacing: 1px;
+    }
+    
+    /* Sidebar menu items */
+    ol li a {
+        padding: 15px 10px 15px 20px;
+        font-size: 16px;
+    }
+    
+    ol li a i {
+        width: 30px;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    
+    ol li:hover a {
+        padding-left: 25px;
+        letter-spacing: 1px;
+    }
+    
+    /* Toggle button */
+    #menu-toggle {
+        right: 15px;
+        top: 15px;
+        padding: 8px 12px;
+        font-size: 20px;
+    }
+    
+    #check:checked ~ section {
+        transform: translateX(30px);
+    }
+    
+    /* Top navigation */
+    
+    
+    .pain a:hover {
+        letter-spacing: 1px;
+    }
+    
+    /* Main content */
+    .element {
+        width: 95%;
+        padding: 0 15px;
+    }
+    
+    #jk {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+    
+    #ele {
+        font-size: 1.1rem;
+        padding: 15px;
+        line-height: 1.5;
+    }
+    
+    /* Reduce animations for performance */
+    .pain a:hover,
+    ol li:hover a {
+        transition: all 0.2s ease;
+    }
+    
+    /* Adjust backdrop filters for mobile performance */
+    .pain ul {
+        backdrop-filter: blur(5px);
+    }
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 220px;
+        transform: translateX(-220px);
+    }
+    
+    .pain ul {
+        flex-direction: column;
+        width: 95%;
+    }
+    
+    .pain li {
+        width: 100%;
+    }
+    
+    #jk {
+        font-size: 2.5rem;
+    }
+    
+    #ele {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+    
+    .pain a {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    #menu-toggle {
+        right: 15px;
+        top: 15px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #jk {
+        font-size: 2rem;
+    }
+    
+    .container .head {
+        font-size: 24px;
+        padding: 20px;
+    }
+    
+    ol li a {
+        font-size: 16px;
+        padding: 15px 10px 15px 20px;
+    }
+}

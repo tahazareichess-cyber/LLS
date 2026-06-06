@@ -1,0 +1,204 @@
+body{
+    background-image: url(vecteezy_abstract-floral-aesthetic-wallpaper-background-template-with_19080166.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+body{
+    height: 100%;
+    overflow-x: hidden;
+}
+.help{
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+    width: 500px;
+    border-radius: 70px;
+    backdrop-filter: blur(2px);
+    line-height: 200%;
+}
+b{
+    color: rgb(231, 87, 87);
+}
+b:hover{
+    cursor: pointer;
+}
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#kks{
+    color: rgb(255, 255, 255);
+}
+button{
+    transition: 1s;
+    left: 1000px;
+    bottom: 100px;
+    padding: 1em 2em;
+    background-color: black;
+    border: none;
+    color: rgb(219, 208, 194);
+    border-radius: 1000px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#next{
+    display: none;
+}
+#nextL{
+    transition: 1s;
+    background: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 99px;
+    border: solid  5px rgb(19, 10, 74);
+    position: relative;
+    left: 1150px;
+    bottom: 130px;
+}
+#nextL:hover{
+    cursor: pointer;
+    box-shadow: 4px 0px 1px 2px rgb(90, 102, 90);
+}
+#before{
+    display: none;
+}
+#beforeL{
+    transition: 1s;
+    background: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 99px;
+    border: solid  5px rgb(19, 10, 74);
+    position: relative;
+    left: 840px;
+    bottom: 129px;
+}
+#beforeL:hover{
+    cursor: pointer;
+    box-shadow: 4px 0px 1px 2px rgb(90, 102, 90);
+}
+button::after{
+    content: '';
+    position: absolute;
+    width: 108%;
+    height: 104%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom left, rgb(7, 7, 7), rgb(17, 61, 255));
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover{
+z-index: 0;
+box-shadow: 40px 0 100px #322fcf, -40px 0 100px #c9cc34;
+}
+.trans {
+    width: 90%;
+    height: 0px;
+    bottom: 0px;
+    position: relative;
+    transition:  2s ease;
+    transform: translateX(-700px);
+    z-index: 100;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 0 0 0 20px;
+}
+.trans p{
+    height: 1300px;
+    position: relative;
+    bottom: 1380px;
+    padding: 20px 20px 20px 40px ;
+    backdrop-filter: blur(20px);
+    width: 480px;
+    right: 50px;
+    font-size: 200%;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+}
+#menu-toggle {
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    font-size: 25px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: #000000;
+    border-radius: 1000px;
+    z-index: 101;
+    transition: all 0.3s;
+}
+#menu-toggle:hover {
+    background: linear-gradient(30deg, #00a2ff, #ffffff);
+    transform: scale(1.1);
+}
+#bars {
+    display: block;
+}
+#check:checked ~ .trans {
+    transform: translateX(0);
+}
+#check:checked ~ #menu-toggle #bars {
+    display: none;
+}
+
+/* Add X icon when sidebar is open */
+#check:checked ~ #menu-toggle::after {
+    content: '\f00d';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 25px;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width: 600px){
+    .help{
+    font-size: 130%;
+    width: 300px;
+}
+button{
+bottom: 7px;
+left: 3px;
+}
+.trans {
+    width: 90%;
+    height: 0px;
+    bottom: 0px;
+    position: relative;
+    transition:  2s ease;
+    transform: translateX(-700px);
+    z-index: 100;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 0 0 0 20px;
+}
+.trans p{
+    height: 1000px;
+    position: relative;
+    bottom: 1080px;
+    padding: 20px 20px 20px 40px ;
+    backdrop-filter: blur(20px);
+    width: 280px;
+    right: 50px;
+    font-size: 200%;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+}
+
+#nextL{
+    left: 250px;
+    bottom: 35px;
+}
+#beforeL{
+    left: 100px;
+    bottom: 35px;
+}
+}

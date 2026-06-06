@@ -1,0 +1,195 @@
+body,html{
+    overflow-x: hidden;
+}
+body{
+    background: url(vecteezy_abstract-floral-aesthetic-wallpaper-background-template-with_19080166.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    z-index: 3;
+}
+.navbar ol {
+
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0;
+    height: 50px;
+}
+.navbar li{
+    flex: 1;
+    text-align: center;
+}
+.navbar  a{ 
+    left: 53px;
+    padding: 0 180px 0 0;
+    position: relative;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: block;
+}
+.navbar a:hover{
+    letter-spacing: 3px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #6b6b6b;
+}
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 77%;
+    right: 77%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(30deg, #16161a, #ffffff);
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+#home{
+transition: all 0.3s;
+border-radius: 1000px;
+cursor: pointer;
+position: fixed;  
+z-index: 322;
+background-color: white;
+color: black;
+left: 1283px;
+top: 100px;  
+font-size: 222%;
+padding: 0 7px 0 7px;
+}
+#home:hover{
+    transform: rotate(10deg);
+}
+#home a{
+    text-decoration: none;
+    color: black;
+}
+#checked{
+    display: none;
+}
+.text{
+    text-align: center;
+    border: solid black 2px;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+    margin: 30px 10px 10px 10px;
+    backdrop-filter: blur(4px);
+}
+#idp{
+    position: relative;
+    left: 300px;
+    font-size: 220%;
+    width: 600px;
+}
+#idh{
+    font-size: 250%;
+}
+.footer{
+    position: relative;
+    top: 0px;
+    text-align: center;
+    background-color: white;
+}
+#topfooter{
+    font-size: 300%;
+    letter-spacing: 3px;
+}
+#bottomfooter{
+    font-size: 200%;
+    position: relative;
+    bottom: 20px;
+    text-decoration: none;
+    
+}
+#bottomfooter a{
+    text-decoration: none;
+    color: red  ;
+    transition: 0.5s;
+}
+#bottomfooter a:hover{
+    letter-spacing: 5px;
+}
+#help{
+    position: relative;
+    right: 90px;
+}
+#feedback{
+    position: relative;
+    left: 90px;
+}
+#checked{
+    display: none;
+}
+@media screen and (max-width: 600px){
+.navbar ol {
+    margin: 0 auto;
+}
+.navbar  a{ 
+    left: 0px;
+    padding: 0 0px 0 0;
+    font-size: 100%;
+}
+#topfooter{
+    font-size: 200%;
+    letter-spacing: 3px;
+}
+#bottomfooter{
+    font-size: 100%;
+    position: relative;
+    bottom: 20px;
+    text-decoration: none;
+    
+}
+#help{
+    position: relative;
+    right: 60px;
+}
+#feedback{
+    position: relative;
+    left: 60px;
+}
+#home{ 
+z-index: 322;
+background-color: white;
+color: black;
+left: 250px;
+top: 100px;  
+font-size: 200%;
+padding: 0 7px 0 7px;
+}
+.text{
+    text-align: center;
+    border: solid black 2px;
+    border-radius: 20px;
+    padding: 5px 5px 5px 5px;
+    margin: 20px 5px 5px 5px;
+    backdrop-filter: blur(4px);
+}
+#idp{
+    position: relative;
+    left: 35px;
+    font-size: 180%;
+    width: 220px;
+}
+#idh{
+    font-size: 250%;
+}
+}

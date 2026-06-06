@@ -1,0 +1,201 @@
+body,html{
+    overflow-x: hidden;
+    height: 100%;
+}
+body{
+    background: url(vecteezy_abstract-floral-aesthetic-wallpaper-background-template-with_19080166.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    z-index: 3;
+}
+.navbar ol {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0;
+    height: 50px;
+}
+.navbar li{
+    flex: 1;
+    text-align: center;
+}
+.navbar  a{ 
+    left: 53px;
+    padding: 0 180px 0 0;
+    position: relative;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: block;
+}
+.navbar a:hover{
+    letter-spacing: 3px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #6b6b6b;
+}
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 77%;
+    right: 77%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(30deg, #16161a, #ffffff);
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+h1{
+    position: relative;
+    text-align: center;
+    top: 50px;
+    font-size: 260%;
+}
+#grammarisfun{
+    
+    position: relative;
+    text-align: center;
+    top: 50px;
+    font-size: 260%;
+
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 10px;
+}
+.container {
+    overflow: auto;
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    background-color: #6d6d6d;
+    transition:  0.5s ease;
+    transform: translateX(-250px);
+    z-index: 100;
+    top: 0;
+    left: 0;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+}
+
+.container .head {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    background: linear-gradient(30deg, #a19f9f, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+/* Sidebar List */
+ol {
+    width: 100%;
+    list-style: none;
+    padding-top: 20px;
+}
+
+ol li {
+    display: block;
+    width: 100%;
+}
+
+ol li a {
+    color: #000000;
+    padding: 18px 30px 18px 0px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-left: 4px solid transparent;
+    position: relative;
+    right: 20px;
+}
+
+ol li a i {
+    width: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+ol li:hover a {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.445), rgba(111, 245, 255, 0.1));
+    color: #ffffff;
+    letter-spacing: 8px;
+    border-left: 4px solid #595a5a;
+    padding-left: 10px;
+}#check {
+    display: none;
+}
+
+/* Menu Toggle Button */
+#menu-toggle {
+    position: fixed;
+    right: 25px;
+    top: 65px;
+    font-size: 25px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: #000000;
+    border-radius: 1000px;
+    z-index: 101;
+    transition: all 0.3s;
+}
+
+#menu-toggle:hover {
+    transform: rotate(10deg);
+}
+
+#bars {
+    display: block;
+}
+
+/* When sidebar is checked/open */
+#check:checked ~ .container {
+    transform: translateX(0);
+}
+
+#check:checked ~ #menu-toggle #bars {
+    display: none;
+}
+
+/* Add X icon when sidebar is open */
+#check:checked ~ #menu-toggle::after {
+    content: '\f00d';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 25px;
+}

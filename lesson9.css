@@ -1,0 +1,219 @@
+body{
+    overflow-x: hidden;
+    height: 100%;
+}
+body{
+    background: url(vecteezy_abstract-floral-aesthetic-wallpaper-background-template-with_19080166.svg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.text{
+    font-family: 'Times New Roman', Times, serif;
+    width: 500px;
+    font-size: 200%;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 0 3px 5px 7px;
+    border-radius: 20px;
+    line-height: 60px;
+    color : rgb(23, 24, 23) ;
+}
+h2{
+    position: relative;
+    top: 10px;
+}
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+b{
+    color: coral;
+}
+b:hover{
+    cursor:pointer;
+}
+button{
+    transition: 1s;
+    left: 1000px;
+    bottom: 100px;
+    padding: 1em 2em;
+    background-color: black;
+    border: none;
+    color: rgb(219, 208, 194);
+    border-radius: 1000px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#next{
+    display: none;
+}
+#nextL{
+    transition: 1s;
+    background: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 99px;
+    border: solid  5px rgb(19, 10, 74);
+    position: relative;
+    left: 1150px;
+    bottom: 130px;
+}
+#nextL:hover{
+    cursor: pointer;
+    box-shadow: 4px 0px 1px 2px rgb(90, 102, 90);
+}
+#before{
+    display: none;
+}
+#beforeL{
+    transition: 1s;
+    background: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 99px;
+    border: solid  5px rgb(19, 10, 74);
+    position: relative;
+    left: 840px;
+    bottom: 129px;
+}
+#beforeL:hover{
+    cursor: pointer;
+    box-shadow: 4px 0px 1px 2px rgb(90, 102, 90);
+}
+button::after{
+    content: '';
+    position: absolute;
+    width: 108%;
+    height: 104%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom left, rgb(7, 7, 7), rgb(17, 61, 255));
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover{
+z-index: 0;    
+}
+.trans {
+    width: 90%;
+    height: 0px;
+    bottom: 0px;
+    position: relative;
+    transition:  2s ease;
+    transform: translateX(-700px);
+    z-index: 100;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 0 0 0 20px;
+}
+.trans p{
+    height: 1000px;
+    position: relative;
+    bottom: 1070px;
+    padding: 20px 20px 20px 40px ;
+    backdrop-filter: blur(20px);
+    width: 480px;
+    right: 50px;
+    font-size: 200%;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+}
+#menu-toggle {
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    font-size: 25px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: #000000;
+    border-radius: 1000px;
+    z-index: 101;
+    transition: all 0.3s;
+}
+#menu-toggle:hover {
+    background: linear-gradient(30deg, #00a2ff, #ffffff);
+    transform: scale(1.1);
+}
+#bars {
+    display: block;
+}
+#check:checked ~ .trans {
+    transform: translateX(0);
+}
+#check:checked ~ #menu-toggle #bars {
+    display: none;
+}
+
+/* Add X icon when sidebar is open */
+#check:checked ~ #menu-toggle::after {
+    content: '\f00d';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 25px;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width: 600px){
+    .text{
+    width: 250px;
+    font-size: 130%;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 0 3px 5px 7px;
+    border-radius: 20px;
+    line-height: 60px;
+    color : rgb(23, 24, 23) ;
+}
+h2{
+    position: relative;
+    top: 10px;
+}
+a{
+    text-decoration: none;
+}
+button{
+    left: 10px;
+    bottom: 10px;
+}
+.trans {
+    width: 90%;
+    height: 0px;
+    bottom: 0px;
+    position: relative;
+    transition:  2s ease;
+    transform: translateX(-700px);
+    z-index: 100;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 0 0 0 20px;
+}
+.trans p{
+    height: 1288px;
+    position: relative;
+    bottom: 1345px;
+    padding: 20px 20px 20px 40px ;
+    backdrop-filter: blur(20px);
+    width: 230px;
+    right: 50px;
+    font-size: 130%;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+}
+#nextL{
+    left: 250px;
+    bottom: 40px;
+}
+#beforeL{
+    left: 100px;
+    bottom: 40px;
+}
+}

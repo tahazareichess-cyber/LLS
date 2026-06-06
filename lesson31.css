@@ -1,0 +1,222 @@
+body{
+    overflow-x: hidden;
+    height: 100%;
+}
+body{
+    background: url(vecteezy_abstract-floral-aesthetic-wallpaper-background-template-with_19080166.svg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+    color: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    width: 500px;
+    padding: 0 10px 10px 10px;
+    line-height: 70px;
+    border-radius: 10px;
+}
+button{
+    transition: 1s;
+    left: 1000px;
+    bottom: 100px;
+    padding: 1em 2em;
+    background-color: black;
+    border: none;
+    color: rgb(219, 208, 194);
+    border-radius: 1000px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#next{
+    display: none;
+}
+#nextL{
+    transition: 1s;
+    background: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 99px;
+    border: solid  5px rgb(19, 10, 74);
+    position: relative;
+    left: 1150px;
+    bottom: 130px;
+}
+#nextL:hover{
+    cursor: pointer;
+    box-shadow: 4px 0px 1px 2px rgb(90, 102, 90);
+}
+#before{
+    display: none;
+}
+#beforeL{
+    transition: 1s;
+    background: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 99px;
+    border: solid  5px rgb(19, 10, 74);
+    position: relative;
+    left: 840px;
+    bottom: 129px;
+}
+#beforeL:hover{
+    cursor: pointer;
+    box-shadow: 4px 0px 1px 2px rgb(90, 102, 90);
+}
+button::after{
+    content: '';
+    position: absolute;
+    width: 108%;
+    height: 104%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom left, rgb(7, 7, 7), rgb(17, 61, 255));
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover{
+z-index: 0;
+cursor: pointer;
+transition: 0.5s;
+}
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+b{
+    color: blue;
+}
+b:hover{
+    cursor: pointer;
+}
+.trans {
+    width: 90%;
+    height: 0px;
+    bottom: 0px;
+    position: relative;
+    transition:  2s ease;
+    transform: translateX(-700px);
+    z-index: 100;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 0 0 0 20px;
+}
+.trans p{
+    height: 850px;
+    position: relative;
+    bottom: 870px;
+    padding: 20px 20px 20px 40px ;
+    backdrop-filter: blur(20px);
+    width: 460px;
+    right: 20px;
+    font-size: 240%;
+    text-align: center;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    line-height: 60px;
+}
+#menu-toggle {
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    font-size: 25px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: #000000;
+    border-radius: 1000px;
+    z-index: 101;
+    transition: all 0.3s;
+}
+#menu-toggle:hover {
+    background: linear-gradient(30deg, #00a2ff, #ffffff);
+    transform: scale(1.1);
+}
+#bars {
+    display: block;
+}
+#check:checked ~ .trans {
+    transform: translateX(0);
+}
+#check:checked ~ #menu-toggle #bars {
+    display: none;
+}
+
+/* Add X icon when sidebar is open */
+#check:checked ~ #menu-toggle::after {
+    content: '\f00d';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 25px;
+}
+#check{
+    display: none;
+}
+@media  screen and (max-width: 600px) {
+    .text{
+    font-size: 130%;
+    color: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    width: 230px;
+    padding: 0 10px 10px 10px;
+    line-height: 70px;
+    border-radius: 10px;
+}
+button{
+    color: rgb(255, 166, 0);
+    border: none;
+    border-radius: 1000px;
+    padding: 1rem 2rem;
+    background-color: rgb(87, 223, 223);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+    transition: 0.5s;
+}
+.trans {
+    width: 90%;
+    height: 0px;
+    bottom: 0px;
+    position: relative;
+    transition:  2s ease;
+    transform: translateX(-700px);
+    z-index: 100;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 0 0 0 20px;
+}
+.trans p{
+    height: 1050px;
+    position: relative;
+    bottom: 1130px;
+    padding: 20px 20px 20px 40px ;
+    backdrop-filter: blur(20px);
+    width: 210px;
+    right: 20px;
+    font-size: 120%;
+    text-align: center;
+    border-radius: 20px;
+    color: rgb(2, 2, 2);
+}
+.trans b {
+    font-size: 300%;
+}
+#nextL{
+    left: 250px;
+    bottom: 40px;
+}
+#beforeL{
+    left: 100px;
+    bottom: 40px;
+}
+}

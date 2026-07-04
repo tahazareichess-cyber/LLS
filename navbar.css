@@ -1,105 +1,32 @@
-/* =========================
-   NAVBAR BASE
-========================= */
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
 }
 
-/* container */
-.nav-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 70px;
-    position: relative;
+.navbar ul{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    list-style:none;
+    min-height:70px;
 }
 
-/* =========================
-   NAV LINKS (DESKTOP)
-========================= */
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    padding: 0;
-    margin: 0;
-    align-items: center;
+.navbar a{
+    text-decoration:none;
+    color:#222;
+    font-size:1.1rem;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #222;
-    font-size: 1.05rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-/* hover effect */
-.nav-links a:hover {
-    transform: scale(1.08);
-    letter-spacing: 0.5px;
-}
-
-/* underline animation */
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
-    height: 2px;
-    background: #222;
-    transition: 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-/* =========================
-   HAMBURGER (optional)
-   Add this button in HTML if needed:
-   <div class="menu-toggle">☰</div>
-========================= */
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-}
-
-/* =========================
-   MOBILE VIEW
-========================= */
-@media (max-width: 768px) {
-
-    .nav-links {
-        flex-direction: column;
-        position: static;   /* IMPORTANT FIX */
-        width: 100%;
-        background: rgba(255,255,255,0.98);
-        box-shadow: none;
-
-        max-height: none;   /* remove hiding */
-        opacity: 1;         /* force visible */
-        overflow: visible;
-    }
-
-    .nav-links li {
-        text-align: center;
-        padding: 15px 0;
-    }
-
-    .menu-toggle {
-        display: none; /* optional since we’re not using toggle yet */
-    }
+.navbar a:hover{
+    letter-spacing: 1px;
+    transform: scale(1.2);
 }

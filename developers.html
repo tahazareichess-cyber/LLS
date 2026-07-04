@@ -4,47 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="developers.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>the site developers </title>
 
 </head>
 <body>
-    <nav class="navbar">
-        <ol>
-            <li><a href="developers.html">devs</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="contact.html">contact</a></li>
-            <li><a href="books.html">books</a></li>
-            <li><a href="notready.html">practice</a></li>
-        </ol>
-    </nav>
-    
-    
-    <input name="checkbox" id="checked" type="checkbox">
-             <label for="checked" id="home">
-                <a href="index.html">
-                    <span class="fas fa-home" id="house">
-                    </span>
-                </a>
-             </label>
-                <div class="text1">
-             <h1 id="tah">Taha</h1>
-      <p>born in 2006 and live in karaj,iran <br>
-    expertise teaching language and website development<br>
-role in site : the website disigner and coder  </p>
-</div>
-        <div class="text2">
-        <h1 id="mahdie">Mahdieh</h1>
-             <p>born in 2007 in and live in tehran,iran<br>
-            expertise english language translation <br>
-        role : translator and content selector  </p>
-             </div>
-                <div class="footer">
-<footer>
-    <p id="topfooter">we hope you enjoy learning<br>
-    give us feed back about our site</p>
-    <p id="bottomfooter"><a href="#" id="help">help</a><a href="#" id="status">status</a><a href="#" id="feedback">feedback</a></p>
-</footer>
-    </div>
+<div id="navbar"></div>
+
+<main class="developers-page">
+
+    <a href="index.html" class="home-button">
+        <span class="fas fa-home"></span>
+    </a>
+
+    <h1 class="page-title">Meet the Developers</h1>
+
+    <section class="developers-grid">
+
+        <article class="developer-card">
+
+            <h2>Taha Zarei</h2>
+
+            <p class="role">Website Designer & Front-End Developer</p>
+
+            <p>
+                Born in 2006 and living in Karaj, Iran.
+                Passionate about language learning and web development.
+                Created the website structure, design, and programming.
+            </p>
+
+        </article>
+
+        <article class="developer-card">
+
+            <h2>Mahdieh</h2>
+
+            <p class="role">Translator & Content Creator</p>
+
+            <p>
+                Born in 2007 and living in Tehran, Iran.
+                Responsible for English translation and selecting
+                educational content for the lessons.
+            </p>
+
+        </article>
+
+    </section>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="navbar.js"></script>
+<script src="footer.js"></script>
 </body>
 </html>

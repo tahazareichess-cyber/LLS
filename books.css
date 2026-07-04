@@ -8,305 +8,113 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-.navbar{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 40px;
-    background-color: white;
-    z-index: 3;
-}
-.navbar ol {
+.books-page{
 
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 0;
-    height: 50px;
-}
-.navbar li{
-    flex: 1;
-    text-align: center;
-}
-.navbar  a{ 
-    left: 53px;
-    padding: 0 180px 0 0;
-    position: relative;
-    text-decoration: none;
-    font-size: 30px;
-    color: black;
-    overflow: hidden;
-    transition: all 0.3s;
-    display: block;
-}
-.navbar a:hover{
-    letter-spacing: 3px;
-    background-color: rgba(0, 0, 0, 0);
-    color: #6b6b6b;
-}
-.navbar a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 77%;
-    right: 77%;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(30deg, #16161a, #ffffff);
-    transition: all 0.3s;
-    transform: translateX(-50%);
-}
-#checked{
-    display: none;
-}
-#home{
-transition: all 0.3s;
-border-radius: 1000px;
-cursor: pointer;
-position: fixed;  
-z-index: 322;
-background-color: white;
-color: black;
-left: 1283px;
-top: 100px;  
-font-size: 222%;
-padding: 0 7px 0 7px;
-}
-#home:hover{
-    transform: rotate(10deg);
-}
-#home a{
-    text-decoration: none;
-    color: black;
-}
-h2{
-    position: relative;
-    top: 30px;
-    left: 50px;
-    transition: 1s;
-    font-size: 200%;
-}
-h2:hover{
-letter-spacing: 3px;
-cursor: pointer;
-}
-img{
-    width: 20%;
-    mix-blend-mode: multiply;
-    position: relative;
-    left: 300px;
-    transition: 1s;
-}
-.first{
-    transform: translateX(-850px);
-    transition: 1s;
-}
-.second{
-    transform: translateX(-850px);
-    transition: 1s;
-}
-.furth{
-    transform: translateX(-850px);
-    transition: 1s;
-}
-.third{
-    transform: translateX(-850px);
-    transition: 1s;
-}
-img:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-}
-#bookone{
-    display: none;
-}
-#booktwo{
-    display: none;
-}
-#bookthree{
-    display: none;
-}
-#bookfour{
-    display: none;
-}
-#info{
-    position: relative;
-    bottom: 35px;
-    left: 150px;
-    background: gray;
-    font-size: 200%;
-    border-radius: 1000px;
-    padding: 4px;
-    transition: 0.5s;
-}
-#info:hover{
-    cursor: pointer;
-    transform: rotate(30deg);
-}
-#infoa{
-    position: relative;
-    bottom: 35px;
-    left: 150px;
-    background: gray;
-    font-size: 200%;
-    border-radius: 1000px;
-    padding: 4px;
-    transition: 0.5s;
-}
-#infoa:hover{
-    cursor: pointer;
-    transform: rotate(30deg);
-}
-#infob{
-    position: relative;
-    bottom: 35px;
-    left: 150px;
-    background: gray;
-    font-size: 200%;
-    border-radius: 1000px;
-    padding: 4px;
-    transition: 0.5s;
-}
-#infob:hover{
-    cursor: pointer;
-    transform: rotate(30deg);
-}
-#infoc{
-    position: relative;
-    bottom: 35px;
-    left: 150px;
-    background: gray;
-    font-size: 200%;
-    border-radius: 1000px;
-    padding: 4px;
-    transition: 0.5s;
-}
-#infoc:hover{
-    cursor: pointer;
-    transform: rotate(30deg);
-}
-#bookone:checked ~ .first{
-    transform: translateX(0);
-}
-#booktwo:checked ~ .second{
-    transform: translateX(0);
-}
-#bookthree:checked ~ .third{
-    transform: translateX(0);
-}
-#bookfour:checked ~ .furth{
-    transform: translateX(0);
-}
-.footer{
-    position: relative;
-    top: 0px;
-    text-align: center;
-    background-color: white;
-}
-#topfooter{
-    font-size: 300%;
-    letter-spacing: 3px;
-}
-#bottomfooter{
-    font-size: 200%;
-    position: relative;
-    bottom: 20px;
-    text-decoration: none;
-    
-}
-#bottomfooter a{
-    text-decoration: none;
-    color: red  ;
-    transition: 0.5s;
-}
-#bottomfooter a:hover{
-    letter-spacing: 5px;
-}
-#help{
-    position: relative;
-    right: 90px;
-}
-#feedback{
-    position: relative;
-    left: 90px;
-}
-@media screen and (max-width: 600px){
-.navbar{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 40px;
-    background-color: white;
-    z-index: 3;
-}
-.navbar ol {
+    width:min(1200px,90%);
+    margin:3rem auto;
 
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 0;
-    height: 50px;
 }
-.navbar li{
-    flex: 1;
-    text-align: center;
+
+.page-title{
+
+    text-align:center;
+    font-size:clamp(2rem,5vw,3.5rem);
+    color:#2f5e2f;
+    margin-bottom:3rem;
+
 }
-.navbar  a{ 
-    left: 0px;
-    padding: 0 0px 0 0;
-    position: relative;
-    text-decoration: none;
-    font-size: 100%;
-    color: black;
-    overflow: hidden;
-    transition: all 0.3s;
-    display: block;
+
+.book-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:2rem;
+
 }
-img{
-    width: 60%;
-    mix-blend-mode: multiply;
-    position: relative;
-    left: 50px;
-    transition: 1s;
+
+.book-card{
+
+    background:rgba(255,255,255,.7);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    padding:2rem;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+
 }
-#topfooter{
-    font-size: 200%;
-    letter-spacing: 3px;
+
+.book-card:hover{
+
+    transform:translateY(-8px);
+
 }
-#bottomfooter{
-    font-size: 100%;
-    position: relative;
-    bottom: 20px;
-    text-decoration: none;
-    
+
+.book-card img{
+
+    width:100%;
+    max-width:180px;
+
+    margin-bottom:1.5rem;
+
+    mix-blend-mode:multiply;
+
 }
-#help{
-    position: relative;
-    right: 60px;
+
+.book-card h2{
+
+    color:#2f5e2f;
+
+    margin-bottom:.75rem;
+
 }
-#feedback{
-    position: relative;
-    left: 60px;
+
+.book-card p{
+
+    color:#555;
+
+    margin-bottom:1.5rem;
+
 }
-#home{ 
-z-index: 322;
-background-color: white;
-color: black;
-left: 250px;
-top: 100px;  
-font-size: 200%;
-padding: 0 7px 0 7px;
+
+.book-button{
+
+    display:inline-block;
+
+    padding:.8rem 1.5rem;
+
+    background:#2f5e2f;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+
 }
+
+.book-button:hover{
+
+    background:#458545;
+
+}
+
+@media (max-width:768px){
+
+    .books-page{
+
+        width:95%;
+
+    }
+
 }

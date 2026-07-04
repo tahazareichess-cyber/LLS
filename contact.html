@@ -4,46 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>contact us</title>
 </head>
 <body>
-    <nav class="navbar">
-        <ol>
-            <li><a href="developers.html">devs</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="contact.html">contact</a></li>
-            <li><a href="books.html">books</a></li>
-            <li><a href="notready.html">practice</a></li>
-        </ol>
-    </nav>
-    <div class="gohome">
-         <input name="checkbox" id="checked" type="checkbox">
-             <label for="checked" id="home"><a href="index.html"><span class="fas fa-home" id="house"></span></a>
-             </label>
-    </div>
-    <div class="emailone">
-        <h2>Email address:</h2>
-        <p id="emailtaha">taha.zarei.chess@gmail.com</p>
-    <button onclick="copyText()" id="copyEmail">copy text</button>
-    </div>
-    <div class="emailone">
-        <h2>phone number 1 :</h2>
-        <p id="phonetaha">09332930201</p>
-    <button onclick="copyText2()" id="copyNumber1">copy text</button>
-    </div>
-    <div class="emailone">
-        <h2>phone number 2 :</h2>
-        <p id="phoneetaha">09332930201</p>
-    <button onclick="copyText3()" id="copyNumber2">copy text</button>
-    </div>
-    <div class="footer">
-<footer>
-    <p id="topfooter">we hope you enjoy learning<br>
-    give us feed back about our site</p>
-    <p id="bottomfooter"><a href="#" id="help">help</a><a href="#" id="status">status</a><a href="#" id="feedback">feedback</a></p>
-</footer>
-    </div>
+
+    <div id="navbar"></div>
+
+    <main class="contact-page">
+
+        <h1 class="page-title">Contact Us</h1>
+
+        <p class="page-description">
+            We'd love to hear from you. Feel free to contact us anytime!
+        </p>
+
+        <section class="contact-grid">
+
+            <article class="contact-card">
+
+                <span class="fas fa-envelope contact-icon"></span>
+
+                <h2>Email</h2>
+
+                <p id="emailtaha">
+                    taha.zarei.chess@gmail.com
+                </p>
+
+                <button onclick="copyText()" id="copyEmail">
+                    Copy Email
+                </button>
+
+            </article>
+
+            <article class="contact-card">
+
+                <span class="fas fa-phone contact-icon"></span>
+
+                <h2>Phone Number</h2>
+
+                <p id="phonetaha">
+                    09332930201
+                </p>
+
+                <button onclick="copyText2()" id="copyNumber1">
+                    Copy Number
+                </button>
+
+            </article>
+
+            <article class="contact-card">
+
+                <span class="fas fa-mobile-screen-button contact-icon"></span>
+
+                <h2>Secondary Number</h2>
+
+                <p id="phoneetaha">
+                    09332930201
+                </p>
+
+                <button onclick="copyText3()" id="copyNumber2">
+                    Copy Number
+                </button>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
     <script src="contact.js"></script>
+
 </body>
 </html>

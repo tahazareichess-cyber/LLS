@@ -9,7 +9,7 @@
 html, body {
     min-height: 100%;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 ::-webkit-scrollbar {
     width: 5px;
@@ -330,11 +330,6 @@ section {
     .container{
         width:220px;
         transform:translateX(-220px);
-    }
-
-    #check:checked ~ section{
-        transform:none;
-        filter:brightness(.75);
     }
 
     #menu-toggle{

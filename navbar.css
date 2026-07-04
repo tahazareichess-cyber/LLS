@@ -82,34 +82,24 @@
 ========================= */
 @media (max-width: 768px) {
 
-    .menu-toggle {
-        display: block;
-    }
-
     .nav-links {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
         flex-direction: column;
-        background: rgba(255, 255, 255, 0.98);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        position: static;   /* IMPORTANT FIX */
+        width: 100%;
+        background: rgba(255,255,255,0.98);
+        box-shadow: none;
 
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: all 0.35s ease;
-    }
-
-    .nav-links.active {
-        max-height: 400px;
-        opacity: 1;
-        padding: 10px 0;
+        max-height: none;   /* remove hiding */
+        opacity: 1;         /* force visible */
+        overflow: visible;
     }
 
     .nav-links li {
-        width: 100%;
         text-align: center;
         padding: 15px 0;
+    }
+
+    .menu-toggle {
+        display: none; /* optional since we’re not using toggle yet */
     }
 }

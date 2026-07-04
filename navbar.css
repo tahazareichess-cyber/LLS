@@ -1,76 +1,115 @@
+/* =========================
+   NAVBAR BASE
+========================= */
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, .92);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* container */
-.navbar ul {
+.nav-container {
     max-width: 1200px;
     margin: auto;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    list-style: none;
+    justify-content: center;
     min-height: 70px;
-    transition: all 0.3s ease;
+    position: relative;
 }
 
-.navbar a {
+/* =========================
+   NAV LINKS (DESKTOP)
+========================= */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-links a {
     text-decoration: none;
     color: #222;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: .3s;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.navbar a:hover {
-    letter-spacing: 1px;
-    transform: scale(1.2);
+/* hover effect */
+.nav-links a:hover {
+    transform: scale(1.08);
+    letter-spacing: 0.5px;
 }
 
-/* HAMBURGER BUTTON (hidden on desktop) */
+/* underline animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #222;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   HAMBURGER (optional)
+   Add this button in HTML if needed:
+   <div class="menu-toggle">☰</div>
+========================= */
 .menu-toggle {
     display: none;
     font-size: 2rem;
     cursor: pointer;
-    padding: 15px 20px;
+    position: absolute;
+    right: 20px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE VIEW
+========================= */
 @media (max-width: 768px) {
 
-    .navbar ul {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
         position: absolute;
         top: 70px;
         left: 0;
         width: 100%;
-        background: rgba(255, 255, 255, .98);
-        box-shadow: 0 4px 12px rgba(0,0,0,.15);
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 
         max-height: 0;
         overflow: hidden;
         opacity: 0;
+        transition: all 0.35s ease;
     }
 
-    .navbar ul.active {
+    .nav-links.active {
         max-height: 400px;
         opacity: 1;
         padding: 10px 0;
     }
 
-    .navbar ul li {
+    .nav-links li {
         width: 100%;
-        padding: 15px 20px;
-    }
-
-    .menu-toggle {
-        display: block;
+        text-align: center;
+        padding: 15px 0;
     }
 }
